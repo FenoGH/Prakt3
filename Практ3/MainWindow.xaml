@@ -1,0 +1,49 @@
+﻿<Window x:Class="Практ3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практ3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF0E119E" Offset="1"/>
+            <GradientStop Color="#FF11BD92" Offset="0.503"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Menu HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="792" Background="Transparent" Foreground="White" Grid.ColumnSpan="2">
+            <MenuItem Header="Меню">
+                <MenuItem.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF18BB47" Offset="0.58"/>
+                        <GradientStop Color="#FF0C0E86" Offset="1"/>
+                    </LinearGradientBrush>
+                </MenuItem.Background>
+                <MenuItem Header="Очистка" Name="ClearProg" Click="ClearProg_Click"  Foreground="Black"/>
+                <MenuItem Header="Выход" Name="ExitProg" Click="ExitProg_Click" Foreground="Black"/>
+                <MenuItem Header="Заполнить" Name="Zap" Click="Zapoln_Click"  Foreground="Black"/>
+                <MenuItem Header="Рассчитать" Name="Ras" Click="Rasch_Click" Foreground="Black"/>
+                <Separator></Separator>
+                <MenuItem Header="Сохранить" Name="Save" Click="SaveMas_Click" Foreground="Black"/>
+                <MenuItem Header="Загрузить" Name="Upp" Click="UploadMas_Click" Foreground="Black"/>
+                <Separator></Separator>
+                <MenuItem Header="О программе" Name="About" Click="About_Click" Foreground="Black"/>
+            </MenuItem>
+            
+        </Menu>
+
+        <DataGrid x:Name="DataG"  Margin="10,22,10,217"/>
+        <TextBox x:Name="Column" HorizontalAlignment="Left" Margin="32,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" Height="28"/>
+        <TextBox x:Name="Row" HorizontalAlignment="Left" Margin="159,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" Height="28"/>
+        <Label Content="Столбцы" HorizontalAlignment="Left" Margin="169,243,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Строки" HorizontalAlignment="Left" Margin="47,243,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button x:Name="Zapoln" Content="Заполнить" HorizontalAlignment="Left" Margin="105,331,0,0" VerticalAlignment="Top" Click="Zapoln_Click"/>
+        <TextBox x:Name="Vivod" HorizontalAlignment="Left" Margin="629,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="45"/>
+
+
+    </Grid>
+</Window>
